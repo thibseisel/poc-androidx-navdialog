@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.github.thibseisel.poc.navdialog.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/open_first_dialog"
+            app:destination="@id/first_dialog_fragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/first_dialog_fragment"
+        android:name="com.github.thibseisel.poc.navdialog.FirstDialogFragment"
+        android:label="First Dialog">
+        <action
+            android:id="@+id/open_second_dialog"
+            app:destination="@id/second_dialog_fragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/second_dialog_fragment"
+        android:name="com.github.thibseisel.poc.navdialog.SecondDialogFragment"
+        android:label="Second Dialog" />
+</navigation>
